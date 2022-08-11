@@ -2,10 +2,10 @@ FROM node:14-alpine
 
 WORKDIR /app
 
-COPY heroku.yml .
-
-COPY . .
+COPY package.json .
 
 RUN npm install
+
+COPY . .
 
 CMD ["npm", "start"]
